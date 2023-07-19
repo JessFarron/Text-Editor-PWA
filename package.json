@@ -1,0 +1,29 @@
+{
+  "name": "text-editor-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessFarron/Text-Editor-PWA.git"
+  },
+  "author": "JessFarron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JessFarron/Text-Editor-PWA/issues"
+  },
+  "homepage": "https://github.com/JessFarron/Text-Editor-PWA#readme"
+}
